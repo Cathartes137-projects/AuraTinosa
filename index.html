@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aura Tiñosa (Cathartes aura) — Biología, superolfato, función ecológica y conservación del zopilote aura. Descubre su anatomía, vuelo en térmicas y rol como depurador natural de los ecosistemas.">
+  <meta name="keywords" content="Aura Tiñosa, Cathartes aura, Zopilote Aura, buitre americano, aves de puerto rico, aves de cuba, ornitologia, conservacion">
+  <link rel="canonical" href="https://auratinosa.example.com/">
+  <title>Aura Tiñosa (Cathartes aura) | Guardián Silencioso del Cielo</title>
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aura Tiñosa (Cathartes aura) | El Rey Incomprendido del Cielo">
+  <meta property="og:description" content="Explora la anatomía, el superolfato y la función ecológica de la Aura Tiñosa a través de una experiencia web interactiva.">
+  <meta property="og:image" content="https://auratinosa.example.com/assets/img/hero.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aura Tiñosa | Guardián Silencioso del Cielo">
+  <meta name="twitter:description" content="Guía interactiva sobre la biología, ecología y conservación del Cathartes aura.">
+
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org/",
+    "@type": "Taxon",
+    "name": "Cathartes aura",
+    "alternateName": ["Aura Tiñosa", "Turkey Vulture", "Zopilote Aura"],
+    "description": "Ave carroñera de la familia Cathartidae, distribuida desde Canadá hasta la Patagonia. Destaca por su superolfato desarrollado, vuelo en diedro positivo aprovechando corrientes térmicas y su rol ecológico como depurador natural de carroña, previniendo la proliferación de patógenos.",
+    "taxonRank": "species",
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "Familia",
+        "value": "Cathartidae"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Estado de Conservación",
+        "value": "LC - Preocupación Menor"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/icono-v.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- ============ HEADER / BARRA DE NAVEGACIÓN ============ -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#inicio" class="logo">
+        <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+          <polygon points="24,4 44,44 24,26 4,44 24,4" fill="#D32F2F" opacity="0.9"/>
+          <polygon points="24,4 44,44 24,26" fill="none" stroke="#F5F5F7" stroke-width="1.5" opacity="0.6"/>
+        </svg>
+        <span class="logo-text">AURA TIÑOSA</span>
+      </a>
+
+      <ul id="menu-principal" class="nav-links">
+        <li><a href="#inicio" class="nav-link">Inicio</a></li>
+        <li><a href="#biologia" class="nav-link">Biología</a></li>
+        <li><a href="#comparativa" class="nav-link">Comparativa</a></li>
+        <li><a href="#habitat" class="nav-link">Distribución</a></li>
+        <li><a href="#ecologia" class="nav-link">Ecológica</a></li>
+        <li><a href="#cultura" class="nav-link">Cultura</a></li>
+        <li><a href="#multimedia" class="nav-link">Multimedia</a></li>
+      </ul>
+
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal">
+        <span class="hamburger"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="contenido-principal">
+
+  <!-- ============ HERO / SECCIÓN DE BIENVENIDA ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero-content container">
+      <span class="hero-kicker">Reino: Animalia &nbsp;·&nbsp; Familia: Cathartidae</span>
+      <h1>Aura Tiñosa: <span class="accent">El Guardián Silencioso</span> del Cielo</h1>
+      <p class="hero-subtitle">
+        Descubre el valor ecológico, la anatomía fascinante y el majestuoso vuelo
+        del rey incomprendido del aire.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#biologia" class="btn btn-primary">
+          Explorar Biología
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9,18 15,12 9,6"/>
+          </svg>
+        </a>
+        <a href="#comparativa" class="btn btn-secondary">
+          Ver Comparativa
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="9,18 15,12 9,6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stats-grid container">
+        <div class="stat-card">
+          <span class="stat-value">170 – 183 cm</span>
+          <span class="stat-label">Envergadura</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">0.85 – 2.26 kg</span>
+          <span class="stat-label">Peso</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">⚡ Ultrasensible</span>
+          <span class="stat-label">Sentido presente</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-value">LC</span>
+          <span class="stat-label">Estado: Preocupación Menor</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MÓDULO 2: BIOLOGÍA Y ADAPTACIONES ============ -->
+  <section id="biologia" class="section-biologia">
+    <div class="container section-inner">
+      <header class="section-header">
+        <h2>Anatomía y Adaptaciones de Supervivencia</h2>
+        <p>
+          Evolución y características biológicas que convierten al Aura Tiñosa
+          <em>(Cathartes aura)</em> en el limpiador natural por excelencia.
+        </p>
+      </header>
+
+      <div class="grid-adaptaciones">
+        <article class="card-adaptacion">
+          <img class="card-img card-img--top" src="assets/img/cabeza-roja.jpg" alt="Primer plano de la cabeza desnuda y roja del Aura Tiñosa, con pico ganchudo y ojo visible" loading="lazy" width="1139" height="960">
+          <span class="card-badge">Característica</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="20" r="10" fill="#D32F2F"/>
+              <path d="M8 36 Q32 24 56 36" fill="none" stroke="#D32F2F" stroke-width="2.5"/>
+              <circle cx="32" cy="48" r="4" fill="#F5F5F7"/>
+            </svg>
+          </div>
+          <h3>Cabeza Desnuda e Higiene</h3>
+          <p>
+            La piel roja al descubierto evita la acumulación de bacterias y residuos
+            al alimentarse dentro de carroña, además de facilitar la termorregulación
+            corporal.
+          </p>
+        </article>
+
+        <article class="card-adaptacion">
+          <img class="card-img" src="assets/img/olfato-rastreo.jpg" alt="Aura Tiñosa rastreando en planeo con las alas extendidas sobre el cielo" loading="lazy" width="1200" height="900">
+          <span class="card-badge">Sensorial</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M32 8 Q40 22 32 36 Q24 22 32 8" fill="none" stroke="#D32F2F" stroke-width="2.5"/>
+              <circle cx="32" cy="44" r="5" fill="#D32F2F"/>
+              <path d="M32 49 L32 56" stroke="#D32F2F" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Sentido del Olfato Desarrollado</h3>
+          <p>
+            Su bulbo olfatorio hipertrofiado le permite detectar etanotiol (gas derivado
+            de la descomposición) a grandes distancias y por encima del dosel arbóreo.
+          </p>
+        </article>
+
+        <article class="card-adaptacion">
+          <img class="card-img" src="assets/img/vuelo-v.jpg" alt="Aura Tiñosa planeando con las alas elevadas en diedro positivo formando una V" loading="lazy" width="1920" height="1280">
+          <span class="card-badge">Movimiento</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <polygon points="32,4 60,40 44,40 32,28 20,40 4,40" fill="#D32F2F"/>
+              <path d="M20 40 L32 52 L44 40" stroke="#F5F5F7" fill="none" stroke-width="2"/>
+              <path d="M16 52 L4 56" stroke="#2A2A32" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Planeo Eficiente en 'V'</h3>
+          <p>
+            La postura característica de sus alas elevadas en diedro positivo mientras se
+            tambalea suavemente, aprovechando corrientes térmicas ascendentes sin necesidad
+            de aletear constantemente.
+          </p>
+        </article>
+
+        <article class="card-adaptacion">
+          <img class="card-img card-img--top" src="assets/img/defensa-urohidrosis.jpg" alt="Aura Tiñosa con las alas extendidas al sol en postura de termorregulación" loading="lazy" width="1920" height="1441">
+          <span class="card-badge">Defensa</span>
+          <div class="card-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="22" y="14" width="20" height="20" rx="4" fill="#D32F2F"/>
+              <path d="M22 14 L22 10 L42 10 L42 14" fill="none" stroke="#D32F2F" stroke-width="2.5"/>
+              <path d="M32 10 L32 6 M32 6 L26 12 M32 6 L38 12" stroke="#D32F2F" stroke-width="2"/>
+              <circle cx="32" cy="42" r="6" fill="#2A2A32"/>
+              <path d="M32 42 L32 54" stroke="#2A2A32" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Urohidrosis y Vómito Defensivo</h3>
+          <p>
+            Uso de la urohidrosis para enfriar y desinfectar sus patas con ácido úrico, así
+            como la expulsión de vómito altamente ácido para repeler posibles depredadores.
+          </p>
+        </article>
+      </div>
+
+      <div class="subseccion-nidos">
+        <div class="nidos-grid">
+          <div class="nidos-texto">
+            <h3>Estrategia de Nidificación y Cuidado de Huevos</h3>
+            <p>
+              El Aura Tiñosa no construye nidos elaborados con ramas, sino que deposita sus
+              huevos directamente en cavidades de árboles, grietas rocosas o en el suelo
+              resguardado. Los huevos presentan pigmentación crema con manchas pardo-rojizas y
+              un cascarón de alta calidad resistente.
+            </p>
+          </div>
+          <figure class="nidos-figura">
+            <img class="card-img" src="assets/img/huevos-aura.jpg" alt="Polluelo recién eclosionado junto a los huevos color crema con manchas pardas del Aura Tiñosa" loading="lazy" width="547" height="370">
+            <figcaption>Polluelo y huevos en una cavidad de nidificación.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MÓDULO 3: COMPARATIVA INTERACTIVA (AURA TIÑOSA VS. ZOPILOTE NEGRO)
+       ============================================================ -->
+  <section id="comparativa" class="section-comparativa">
+    <div class="container section-inner">
+      <header class="section-header">
+        <span class="section-tag">Módulo 03 · Duelo de Especies</span>
+        <h2>Aura Tiñosa vs. Zopilote Negro: El Duelo por el Cielo</h2>
+        <p>Dos reyes del aire con estrategias totalmente opuestas pero complementarias en el ecosistema.</p>
+      </header>
+
+      <div class="comparativa-container">
+        <!-- Selector / Pestañas de Filtrado -->
+        <div class="comparativa-tabs" role="group" aria-label="Filtros de la comparativa entre especies">
+          <button type="button" class="tab-btn active" data-tab="visual" id="tab-visual" aria-pressed="true">
+            <svg class="tab-btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/>
+              <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/>
+            </svg>
+            Visual &amp; Anatómica
+          </button>
+          <button type="button" class="tab-btn" data-tab="rastreo" id="tab-rastreo" aria-pressed="false">
+            <svg class="tab-btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+              <path d="M2 12h20"/>
+            </svg>
+            Estrategia de Caza/Rastreo
+          </button>
+          <button type="button" class="tab-btn" data-tab="vuelo" id="tab-vuelo" aria-pressed="false">
+            <svg class="tab-btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 12l-10-6-10 6 10 6 10-6z"/>
+              <path d="M6 12v4.5c0 1.5 2.5 3 6 3s6-1.5 6-3V12"/>
+            </svg>
+            Dinámica de Vuelo y Jerarquía
+          </button>
+        </div>
+
+        <!-- Tarjetas Comparativas Lado a Lado -->
+        <div class="comparativa-grid">
+          <!-- Columna Aura Tiñosa (Cathartes aura) -->
+          <article class="card-especie card-aura">
+            <header class="card-especie-header">
+              <div class="especie-badge-wrap">
+                <span class="especie-tag">Cathartes aura</span>
+                <span class="especie-distintivo carmesi">
+                  <span class="distintivo-dot" aria-hidden="true"></span>
+                  Distintivo carmesí #D32F2F
+                </span>
+              </div>
+              <h3 class="especie-nombre">Aura Tiñosa</h3>
+              <p class="especie-subtitulo">Rastreador silencioso de gran envergadura y planeo térmico continuo</p>
+            </header>
+
+            <img class="card-img" src="assets/img/aura-percha.jpg" alt="Aura Tiñosa posada en una rama, con la cabeza roja y el plumaje oscuro" loading="lazy" width="1920" height="1280">
+
+            <div class="comparativa-items">
+              <!-- Ítem 1 (Olfato) -->
+              <div class="comparativa-item visible" data-category="visual rastreo">
+                <div class="item-meta">
+                  <span class="item-badge badge-aura-item">Ítem 1 · Olfato</span>
+                  <span class="item-index">01</span>
+                </div>
+                <h4 class="item-titulo">Sensibilidad Olfativa</h4>
+                <p class="item-desc">Rastreador biológico capaz de oler etanotiol a gran altura.</p>
+              </div>
+
+              <!-- Ítem 2 (Cabeza) -->
+              <div class="comparativa-item visible" data-category="visual">
+                <div class="item-meta">
+                  <span class="item-badge badge-aura-item">Ítem 2 · Cabeza</span>
+                  <span class="item-index">02</span>
+                </div>
+                <h4 class="item-titulo">Anatomía Cefálica</h4>
+                <p class="item-desc">Roja, desnuda y lisa.</p>
+              </div>
+
+              <!-- Ítem 3 (Vuelo) -->
+              <div class="comparativa-item hidden" data-category="vuelo">
+                <div class="item-meta">
+                  <span class="item-badge badge-aura-item">Ítem 3 · Vuelo</span>
+                  <span class="item-index">03</span>
+                </div>
+                <h4 class="item-titulo">Patrón de Planeo</h4>
+                <p class="item-desc">Planeo en "V" estable sin apenas aletear.</p>
+              </div>
+
+              <!-- Ítem 4 (Comportamiento) -->
+              <div class="comparativa-item hidden" data-category="rastreo vuelo">
+                <div class="item-meta">
+                  <span class="item-badge badge-aura-item">Ítem 4 · Comportamiento</span>
+                  <span class="item-index">04</span>
+                </div>
+                <h4 class="item-titulo">Estrategia de Búsqueda</h4>
+                <p class="item-desc">Encuentra primero la carroña en solitario o parejas.</p>
+              </div>
+            </div>
+          </article>
+
+          <!-- Columna Zopilote Negro (Coragyps atratus) -->
+          <article class="card-especie card-zopilote">
+            <header class="card-especie-header">
+              <div class="especie-badge-wrap">
+                <span class="especie-tag">Coragyps atratus</span>
+                <span class="especie-distintivo carbon">
+                  <span class="distintivo-dot" aria-hidden="true"></span>
+                  Distintivo gris/carbón #555560
+                </span>
+              </div>
+              <h3 class="especie-nombre">Zopilote Negro</h3>
+              <p class="especie-subtitulo">Vigía visual de complexión compacta y dominio grupal agresivo</p>
+            </header>
+
+            <img class="card-img" src="assets/img/zopilote-negro.jpg" alt="Retrato de un Zopilote Negro (Coragyps atratus) con cabeza negruzca y rugosa" loading="lazy" width="1920" height="1354">
+
+            <div class="comparativa-items">
+              <!-- Ítem 1 (Vista) -->
+              <div class="comparativa-item visible" data-category="visual rastreo">
+                <div class="item-meta">
+                  <span class="item-badge badge-zopilote-item">Ítem 1 · Vista</span>
+                  <span class="item-index">01</span>
+                </div>
+                <h4 class="item-titulo">Percepción Ocular</h4>
+                <p class="item-desc">Carece de superolfato; depende 100% de la vista.</p>
+              </div>
+
+              <!-- Ítem 2 (Cabeza) -->
+              <div class="comparativa-item visible" data-category="visual">
+                <div class="item-meta">
+                  <span class="item-badge badge-zopilote-item">Ítem 2 · Cabeza</span>
+                  <span class="item-index">02</span>
+                </div>
+                <h4 class="item-titulo">Anatomía Cefálica</h4>
+                <p class="item-desc">Negruzca y rugosa.</p>
+              </div>
+
+              <!-- Ítem 3 (Vuelo) -->
+              <div class="comparativa-item hidden" data-category="vuelo">
+                <div class="item-meta">
+                  <span class="item-badge badge-zopilote-item">Ítem 3 · Vuelo</span>
+                  <span class="item-index">03</span>
+                </div>
+                <h4 class="item-titulo">Patrón de Planeo</h4>
+                <p class="item-desc">Aleteo rápido seguido de planeo plano horizontal.</p>
+              </div>
+
+              <!-- Ítem 4 (Comportamiento) -->
+              <div class="comparativa-item hidden" data-category="rastreo vuelo">
+                <div class="item-meta">
+                  <span class="item-badge badge-zopilote-item">Ítem 4 · Comportamiento</span>
+                  <span class="item-index">04</span>
+                </div>
+                <h4 class="item-titulo">Estrategia de Búsqueda</h4>
+                <p class="item-desc">Sigue al Aura Tiñosa desde las alturas y la desplaza por número en el suelo.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============================================================
+       FIN MÓDULO 3: COMPARATIVA INTERACTIVA
+       ============================================================ -->
+
+  <!-- ============================================================
+       MÓDULO 4: HÁBITAT, DISTRIBUCIÓN Y MAPA INTERACTIVO
+       ============================================================ -->
+  <section id="habitat" class="section-habitat">
+    <div class="container section-inner">
+      <header class="section-header">
+        <span class="section-tag">Módulo 04 · Rango Geográfico</span>
+        <h2>Distribución Geográfica y Hábitat</h2>
+        <p>Desde Canadá hasta la Patagonia, con presencia histórica y destacada en el Caribe.</p>
+      </header>
+
+      <div class="habitat-layout">
+        <!-- Columna Mapa -->
+        <div class="mapa-wrapper">
+          <div id="mapa-aura" class="mapa-container"></div>
+          <div class="mapa-legend">
+            <span class="legend-dot" aria-hidden="true"></span>
+            <span class="legend-text">Puntos de observación clave y registros de distribución en las Américas</span>
+          </div>
+        </div>
+
+        <!-- Columna Detalles de Hábitat -->
+        <div class="habitat-info">
+          <!-- Tarjeta 1 (Ecosistemas) -->
+          <article class="card-habitat">
+            <div class="card-habitat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="card-habitat-body">
+              <span class="card-habitat-badge">Ecosistemas</span>
+              <h3 class="card-habitat-title">Diversidad de Biomas</h3>
+              <p class="card-habitat-text">Bosques, desiertos, zonas costeras y áreas abiertas.</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 (Corrientes Térmicas) -->
+          <article class="card-habitat">
+            <div class="card-habitat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/>
+              </svg>
+            </div>
+            <div class="card-habitat-body">
+              <span class="card-habitat-badge">Corrientes Térmicas</span>
+              <h3 class="card-habitat-title">Aprovechamiento Orográfico</h3>
+              <p class="card-habitat-text">Adaptación para sobrevolar montañas y valles aprovechando el calor del suelo.</p>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 (Foco Caribeño) -->
+          <article class="card-habitat">
+            <div class="card-habitat-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </div>
+            <div class="card-habitat-body">
+              <span class="card-habitat-badge">Foco Caribeño</span>
+              <h3 class="card-habitat-title">Presencia en las Antillas</h3>
+              <p class="card-habitat-text">Registros e historia en Cuba y Puerto Rico (introducción histórica en el siglo XIX).</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============================================================
+       FIN MÓDULO 4: HÁBITAT, DISTRIBUCIÓN Y MAPA INTERACTIVO
+       ============================================================ -->
+
+  <!-- ============ SECCIÓN 2: ROL ECOLÓGICO Y SANITARIO ============ -->
+  <section class="section section-alt" id="ecologia">
+    <div class="container section-inner">
+      <header class="section-header">
+        <span class="section-tag">Sección 02</span>
+        <h2>Rol Ecológico y Sanitario</h2>
+        <p>
+          El Aura Tiñosa es un componente clave del equilibrio de los ecosistemas,
+          actuando como uno de los principales depuradores naturales de la superficie terrestre.
+        </p>
+      </header>
+
+      <div class="ecology-content">
+        <div class="ecology-text">
+          <p>
+            Al eliminar de forma masiva carroña y cadáveres, estos grandes cuerpos
+            de aves previenen la proliferación de patógenos y reducen el riesgo de
+            brotes epidemiológicos que pudieran afectar a otras especies, incluida
+            la humana. Su presencia es un indicador de un ecosistema sano y
+            funcional, donde la materia orgánica se recicla de manera eficiente.
+          </p>
+          <p>
+            Gracias a su sensibilidad olfativa, el zopilote detecta la presencia
+            de restos animales en suelo en descomposición, lo que acelera el
+            proceso de descomposición y devuelve nutrientes al suelo. Esta
+            actividad envuelve y enriquece la tierra, fomentando el crecimiento de
+            plantas y la estabilidad de los suelos.
+          </p>
+          <blockquote class="ecology-quote">
+            "El guardian silencioso que alimienta al mundo sin pedir reconocimiento."
+          </blockquote>
+        </div>
+
+        <div class="ecology-visual" aria-hidden="true">
+          <svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="230" width="520" height="90" fill="#2A2A32"/>
+            <ellipse cx="260" cy="120" rx="40" ry="28" fill="#1E1E24"/>
+            <circle cx="280" cy="70" r="12" fill="#D32F2F"/>
+            <rect x="270" y="62" width="20" height="4" rx="2" fill="#F5F5F7"/>
+            <path d="M230 118 Q180 60 150 45 Q190 30 220 35 Q280 30 310 45 Q360 60 320 118" fill="#1E1E24" stroke="#2A2A32" stroke-width="2"/>
+            <path d="M230 118 Q180 60 150 45 Q190 30 220 35 Q280 30 310 45 Q360 60 320 118" fill="none" stroke="#D32F2F" stroke-width="1" opacity="0.5"/>
+            <line x1="228" y1="124" x2="260" y2="120" stroke="#F5F5F7" stroke-width="2.5"/>
+            <line x1="300" y1="120" x2="330" y2="124" stroke="#F5F5F7" stroke-width="2.5"/>
+            <line x1="260" y1="148" x2="252" y2="170" stroke="#F5F5F7" stroke-width="2.5"/>
+            <line x1="300" y1="148" x2="308" y2="170" stroke="#F5F5F7" stroke-width="2.5"/>
+            <line x1="252" y1="170" x2="250" y2="178" stroke="#F5F5F7" stroke-width="2"/>
+            <line x1="258" y1="178" x2="254" y2="186" stroke="#F5F5F7" stroke-width="2"/>
+            <line x1="308" y1="170" x2="306" y2="178" stroke="#F5F5F7" stroke-width="2"/>
+            <line x1="314" y1="178" x2="310" y2="186" stroke="#F5F5F7" stroke-width="2"/>
+            <g transform="translate(70, 60)">
+              <circle cx="20" cy="50" r="30" fill="#1E1E24" stroke="#2A2A32" stroke-width="2"/>
+              <line x1="20" y1="20" x2="20" y2="35" stroke="#D32F2F" stroke-width="2"/>
+              <line x1="55" y1="25" x2="55" y2="40" stroke="#D32F2F" stroke-width="2"/>
+              <line x1="55" y1="40" x2="85" y2="25" stroke="#D32F2F" stroke-width="2"/>
+              <line x1="55" y1="40" x2="85" y2="60" stroke="#D32F2F" stroke-width="2"/>
+              <line x1="20" y1="35" x2="20" y2="10" stroke="#D32F2F" stroke-width="2"/>
+            </g>
+            <polyline points="400,60 420,100 440,60" fill="none" stroke="#D32F2F" stroke-width="2" stroke-linecap="round"/>
+            <text x="470" y="85" fill="#F5F5F7" font-family="monospace" font-size="14">Nutrientes</text>
+            <text x="475" y="102" fill="#C5C6C7" font-family="monospace" font-size="10">al suelo</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MÓDULO 5: DIMENSIÓN CULTURAL, ESPIRITUAL Y CIENTÍFICA ============ -->
+  <section id="cultura" class="section-cultura">
+    <div class="container section-inner">
+      <header class="section-header">
+        <h2>Dimensión Cultural, Espiritual y Frontera Científica</h2>
+        <p>El puente entre la veneración ancestral y los descubrimientos genómicos modernos.</p>
+      </header>
+
+      <div class="cultura-grid">
+        <article class="card-cultura">
+          <div class="card-cultura-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M32 8 Q40 22 32 36 Q24 22 32 8" fill="none" stroke="#D32F2F" stroke-width="2.5"/>
+              <circle cx="32" cy="44" r="5" fill="#D32F2F"/>
+              <path d="M32 49 L32 56" stroke="#D32F2F" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Simbolismo Afrocaribeño y Osha-Ifá</h3>
+          <p>
+            En la regla de Osha-Ifá, la Aura Tiñosa es una figura sagrada asociada al
+            espíritu <em>B directional</em>, guía de caminos y protector de los viajeros.
+            Sus vuelos sostenidos simbolizan la conexión entre lo visible y lo oculto;
+            su labor de limpieza representa la purificación de lo tóxico y lo persiguido.
+          </p>
+          <span class="card-cultura-badge">Tradición Lucumí</span>
+        </article>
+
+        <article class="card-cultura">
+          <div class="card-cultura-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <rect x="14" y="14" width="36" height="36" rx="4" fill="#D32F2F"/>
+              <rect x="22" y="22" width="20" height="20" rx="2" fill="#1E1E24"/>
+              <circle cx="32" cy="32" r="6" fill="none" stroke="#F5F5F7" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Frontera Genómica y Biológica</h3>
+          <p>
+            La secuenciación del genoma completo de la Aura Tiñosa (GigaDB Dataset) reveló
+            una resistencia inmunológica única frente a toxinas botulínicas y bacterias
+            patógenas. Estudios sobre la cáscara de sus huevos (<em>Journal of Caribbean
+            Ornithology</em>) muestran un grueso y pigmentado pre-plaguicidas, clave para
+            la supervivencia en entornos costeros.
+          </p>
+          <span class="card-cultura-badge">Genómica Moderna</span>
+        </article>
+
+        <article class="card-cultura">
+          <div class="card-cultura-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <path d="M4 4 L60 60" fill="none" stroke="#2A2A32" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 60 L60 4" fill="none" stroke="#2A2A32" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="32" cy="32" r="8" fill="#D32F2F"/>
+            </svg>
+          </div>
+          <h3>Retos de Conservación y Amenazas</h3>
+          <p>
+            La especie enfrenta la contaminación química y la presencia de residuos de
+            diclofenaco; además, sufre colisiones aéreas, contactos con tendidos eléctricos
+            y prejuicios estéticos infundados que dificultan su protección efectiva.
+          </p>
+          <span class="card-cultura-badge">Conservación</span>
+        </article>
+      </div>
+
+      <div class="bloque-cita">
+        <blockquote>
+          "No juzgamos al cirujano por usar guantes ni al Aura por carecer de plumas en su
+          cabeza; ambas son herramientas de absoluta pureza."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       MÓDULO 6: GALERÍA MULTIMEDIA, SONIDOS Y COMUNIDAD DE AVISTAMIENTO
+       ============================================================ -->
+  <section id="multimedia" class="section-galeria">
+    <div class="container section-inner">
+      <header class="section-header">
+        <span class="section-tag">Módulo 06 · Multimedia &amp; Comunidad</span>
+        <h2>Galería Multimedia y Registro de Avistamientos</h2>
+        <p>Explora la majestuosidad de su vuelo, escucha sus vocalizaciones y únete al registro de observación.</p>
+      </header>
+
+      <!-- Subsección 1: Galería y Audio -->
+      <div class="galeria-audio-container">
+        <!-- Tarjeta destacada: Reproductor de vocalizaciones -->
+        <article class="card-audio" aria-labelledby="card-audio-title">
+          <header class="card-audio-header">
+            <span class="audio-badge">Registro bioacústico</span>
+            <h3 id="card-audio-title" class="audio-title">Vocalizaciones y siseos de advertencia</h3>
+          </header>
+
+          <p class="card-audio-note">
+            A diferencia de otras rapaces, el Aura Tiñosa no posee siringe vocal. Su única
+            emisión sonora son siseos y gruñidos de advertencia.
+          </p>
+
+          <div class="card-audio-player">
+            <audio
+              id="aura-audio"
+              class="audio-html5"
+              controls
+              preload="metadata"
+              aria-label="Reproductor del siseo de advertencia del Aura Tiñosa"
+            >
+              <source src="assets/audio/siseo-aura.mp3" type="audio/mpeg">
+              <source src="assets/audio/siseo-aura.wav" type="audio/wav">
+              Tu navegador no admite audio HTML5. Puedes
+              <a href="assets/audio/siseo-aura.mp3">descargar el siseo en MP3</a>.
+            </audio>
+
+            <p class="audio-details">
+              Duración aproximada: 0:04 · Muestra educativa de libre uso ·
+              <a href="assets/audio/CREDITOS-AUDIO.md">Ver créditos del audio</a>
+            </p>
+          </div>
+        </article>
+
+        <!-- Grid de Galería Multimedia -->
+        <div class="galeria-grid">
+          <figure class="galeria-card">
+            <div class="galeria-img-wrap">
+              <img src="assets/img/galeria-planeo.svg" alt="Silueta en planeo del Aura Tiñosa con alas elevadas en diedro positivo en V" class="galeria-img" loading="lazy">
+              <div class="galeria-overlay">
+                <span class="galeria-category">Dinámica Aérea</span>
+              </div>
+            </div>
+            <figcaption class="galeria-caption">
+              <h4 class="galeria-card-title">Silueta en Planeo Térmico</h4>
+              <p class="galeria-card-desc">Planeo con alas en diedro en V, aprovechando las corrientes ascendentes sin batir alas.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="galeria-card">
+            <div class="galeria-img-wrap">
+              <img src="assets/img/galeria-cabeza.svg" alt="Primer plano anatómico de la cabeza roja sin plumas del Aura Tiñosa" class="galeria-img" loading="lazy">
+              <div class="galeria-overlay">
+                <span class="galeria-category">Anatomía Clave</span>
+              </div>
+            </div>
+            <figcaption class="galeria-caption">
+              <h4 class="galeria-card-title">Detalle de Cabeza Roja</h4>
+              <p class="galeria-card-desc">Piel carmesí desnuda que inhibe la adhesión bacteriana y regula la temperatura corporal.</p>
+            </figcaption>
+          </figure>
+
+          <figure class="galeria-card">
+            <div class="galeria-img-wrap">
+              <img src="assets/img/galeria-envergadura.svg" alt="Aura Tiñosa con alas abiertas al sol en postura de secado y termorregulación" class="galeria-img" loading="lazy">
+              <div class="galeria-overlay">
+                <span class="galeria-category">Comportamiento</span>
+              </div>
+            </div>
+            <figcaption class="galeria-caption">
+              <h4 class="galeria-card-title">Envergadura al Sol</h4>
+              <p class="galeria-card-desc">Postura en horquilla con alas extendidas de 180 cm para secar el plumaje y calentarse.</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Subsección 2: Registro de Avistamientos y Pajareo -->
+      <div class="avistamientos-box">
+        <div class="avistamientos-header">
+          <span class="section-tag">Ciencia Ciudadana</span>
+          <h3>Registro de Avistamientos y Red Comunitaria</h3>
+          <p>Contribuye al monitoreo de poblaciones reportando tus observaciones de campo o conectando con plataformas globales.</p>
+        </div>
+
+        <div class="avistamientos-content">
+          <!-- Formulario interactivo simple -->
+          <form id="form-avistamiento" class="avistamiento-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="avistamiento-nombre" class="form-label">Nombre o Alias</label>
+                <input type="text" id="avistamiento-nombre" name="nombre" class="form-input" placeholder="Tu nombre o identificador de campo" required>
+              </div>
+              <div class="form-group">
+                <label for="avistamiento-ubicacion" class="form-label">Ubicación del Avistamiento</label>
+                <input type="text" id="avistamiento-ubicacion" name="ubicacion" class="form-input" placeholder="Ciudad, provincia, parque o coordenadas" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="avistamiento-fecha" class="form-label">Fecha del Avistamiento</label>
+                <input type="date" id="avistamiento-fecha" name="fecha" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label for="avistamiento-entorno" class="form-label">Tipo de Hábitat / Entorno</label>
+                <input type="text" id="avistamiento-entorno" name="entorno" class="form-input" placeholder="Ej. Costa rocosa, bosque, valle montañoso">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="avistamiento-notas" class="form-label">Notas de Comportamiento</label>
+              <textarea id="avistamiento-notas" name="notas" rows="3" class="form-textarea" placeholder="Describe la altura de vuelo, interacción con otras aves, presencia de carroña..." required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="btn-reportar-avistamiento" class="btn btn-primary">
+                Reportar Avistamiento
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"/>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                </svg>
+              </button>
+              <div id="avistamiento-feedback" class="form-feedback" aria-live="polite"></div>
+            </div>
+          </form>
+
+          <!-- Enlaces comunitarios a plataformas de avistamiento -->
+          <div class="community-platforms-card">
+            <h4>Plataformas Globales de Monitoreo</h4>
+            <p>Sincroniza tus registros ornitológicos con las bases de datos de biodiversidad más reconocidas:</p>
+            <div class="community-links-grid">
+              <a href="https://www.birdingplaces.eu/" target="_blank" rel="noopener noreferrer" class="community-link-btn">
+                <div class="community-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                  </svg>
+                </div>
+                <div class="community-link-text">
+                  <strong>Birdingplaces</strong>
+                  <span>Guía y mapas de avistamiento en el mundo</span>
+                </div>
+              </a>
+
+              <a href="https://ebird.org/" target="_blank" rel="noopener noreferrer" class="community-link-btn">
+                <div class="community-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                    <line x1="4" y1="22" x2="4" y2="15"/>
+                  </svg>
+                </div>
+                <div class="community-link-text">
+                  <strong>eBird (Cornell Lab)</strong>
+                  <span>Base de datos participativa líder global</span>
+                </div>
+              </a>
+
+              <a href="https://www.inaturalist.org/" target="_blank" rel="noopener noreferrer" class="community-link-btn">
+                <div class="community-link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <div class="community-link-text">
+                  <strong>iNaturalist</strong>
+                  <span>Ciencia ciudadana y registros fotográficos</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ============================================================
+       FIN MÓDULO 6: GALERÍA MULTIMEDIA, SONIDOS Y COMUNIDAD DE AVISTAMIENTO
+       ============================================================ -->
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER GENERAL DEL SITIO (SITE-FOOTER)
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container site-footer-grid">
+      <!-- Columna 1: Logo y lema de conservación -->
+      <div class="footer-col footer-col-brand">
+        <a href="#inicio" class="logo">
+          <svg class="logo-icon" viewBox="0 0 48 48" aria-hidden="true">
+            <polygon points="24,4 44,44 24,26 4,44 24,4" fill="#D32F2F"/>
+            <polygon points="24,4 44,44 24,26" fill="none" stroke="#F5F5F7" stroke-width="1.5" opacity="0.6"/>
+          </svg>
+          <span class="logo-text">AURA TIÑOSA</span>
+        </a>
+        <p class="footer-lema">
+          El guardián silencioso del cielo. Preservando el equilibrio ecológico de las Américas a través de la ciencia, la educación y la comunidad ornitológica.
+        </p>
+        <span class="footer-species-tag">Cathartes aura · Familia Cathartidae</span>
+      </div>
+
+      <!-- Columna 2: Enlaces rápidos de navegación -->
+      <div class="footer-col footer-col-nav">
+        <h4 class="footer-title">Navegación</h4>
+        <ul class="footer-nav-links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#biologia">Biología</a></li>
+          <li><a href="#comparativa">Comparativa</a></li>
+          <li><a href="#habitat">Distribución</a></li>
+          <li><a href="#cultura">Cultura</a></li>
+          <li><a href="#multimedia">Multimedia</a></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Créditos de desarrollo -->
+      <div class="footer-col footer-col-credits">
+        <h4 class="footer-title">Créditos</h4>
+        <p class="footer-credits-text">
+          Construido con HTML5, CSS3, JS | Desplegado en Vercel | Orca Workspaces
+        </p>
+        <div class="footer-sources-quick">
+          <span class="sources-title">Fuentes Ornitológicas:</span>
+          <span>BirdLife International · Cornell Lab of Ornithology · GigaDB Dataset</span>
+        </div>
+
+        <details class="footer-image-credits">
+          <summary>Créditos de imágenes</summary>
+          <ul>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Cathartes_aura_-Florida_-USA_-flying-8.jpg" target="_blank" rel="noopener noreferrer">Aura en vuelo</a> · Dori · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Turkey_Vulture_Head_Closeup.jpg" target="_blank" rel="noopener noreferrer">Cabeza desnuda</a> · Shravans14 · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Cathartes_aura-gliding.jpg" target="_blank" rel="noopener noreferrer">Planeo de rastreo</a> · Peterwchen · <a href="https://creativecommons.org/licenses/by-sa/4.0" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Turkey_Vulture_-_DPLA_-_c419e3abaa377ee32a81f3f7cab05c0e.jpg" target="_blank" rel="noopener noreferrer">Vuelo en V</a> · U.S. Fish and Wildlife Service · Dominio público</li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Getting_Some_Sun.jpg" target="_blank" rel="noopener noreferrer">Termorregulación al sol</a> · Ingrid Taylar · <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Turkey_vulture_chick_and_eg.jpg" target="_blank" rel="noopener noreferrer">Huevos y polluelo</a> · Charolais / Haplochromis · <a href="https://creativecommons.org/licenses/by/2.5" target="_blank" rel="noopener noreferrer">CC BY 2.5</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Black_Vulture_(Coragyps_atratus)_portrait_..._(28690799946).jpg" target="_blank" rel="noopener noreferrer">Zopilote Negro</a> · Bernard DUPONT · <a href="https://creativecommons.org/licenses/by-sa/2.0" target="_blank" rel="noopener noreferrer">CC BY-SA 2.0</a></li>
+            <li><a href="https://commons.wikimedia.org/wiki/File:Turkey_Vulture_Perched_on_Branch_1.jpg" target="_blank" rel="noopener noreferrer">Aura en percha</a> · Amaury Laporte · <a href="https://creativecommons.org/licenses/by/2.0" target="_blank" rel="noopener noreferrer">CC BY 2.0</a></li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <!-- Texto final de derechos y preservación de especies -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 Aura Tiñosa. Todos los derechos reservados. Dedicado a la preservación y respeto de las aves carroñeras y su rol vital en los ecosistemas globales.</p>
+        <p class="footer-subtext">Construido con HTML5 semántico, CSS responsivo y Vanilla JavaScript interactivo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Librería externa Leaflet.js y scripts modulares -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+  <script src="js/mapa.js" defer></script>
+  <script src="js/audio.js" defer></script>
+  <script src="js/comparativa.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

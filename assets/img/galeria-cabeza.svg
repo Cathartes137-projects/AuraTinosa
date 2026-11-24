@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="darkBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#1E1E24"/>
+      <stop offset="60%" stop-color="#141418"/>
+      <stop offset="100%" stop-color="#0E0E10"/>
+    </radialGradient>
+    <radialGradient id="headGlow" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#EF5350"/>
+      <stop offset="45%" stop-color="#D32F2F"/>
+      <stop offset="90%" stop-color="#9A0007"/>
+      <stop offset="100%" stop-color="#5F0000"/>
+    </radialGradient>
+    <linearGradient id="beakGrad" x1="0%" y1="0%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E8E8E4"/>
+      <stop offset="100%" stop-color="#B0B0A8"/>
+    </linearGradient>
+    <linearGradient id="neckFeathers" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E1E24"/>
+      <stop offset="100%" stop-color="#0A0A0C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo cinematográfico oscuro -->
+  <rect width="600" height="400" fill="url(#darkBg)"/>
+
+  <!-- Destello sutil de luz cenital -->
+  <circle cx="340" cy="180" r="160" fill="rgba(211,47,47,0.12)"/>
+
+  <!-- Collar de plumas negras densas en la base del cuello -->
+  <path d="M120 370 Q160 250 250 230 Q280 280 320 310 Q390 350 480 400 L120 400 Z" fill="url(#neckFeathers)" stroke="#2A2A32" stroke-width="2"/>
+  <!-- Detalle de plumas imbricadas -->
+  <path d="M160 380 Q220 280 280 250 Q310 290 360 340" fill="none" stroke="rgba(244,244,242,0.1)" stroke-width="2"/>
+  <path d="M210 390 Q260 300 320 270" fill="none" stroke="rgba(244,244,242,0.12)" stroke-width="1.5"/>
+
+  <!-- Cuello carmesí descubierto -->
+  <path d="M250 235 Q270 170 300 150 Q350 210 320 290 Z" fill="url(#headGlow)"/>
+
+  <!-- Cabeza roja desnuda (piel rugosa pero lisa, sin plumas) -->
+  <ellipse cx="320" cy="140" rx="65" ry="50" fill="url(#headGlow)" transform="rotate(-15, 320, 140)"/>
+  
+  <!-- Pliegues dérmicos y textura vascular cefálica -->
+  <path d="M280 125 Q310 115 345 120" fill="none" stroke="rgba(255,160,160,0.3)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M290 140 Q320 130 355 138" fill="none" stroke="rgba(255,160,160,0.25)" stroke-width="1.8" stroke-linecap="round"/>
+  <path d="M275 155 Q305 148 335 158" fill="none" stroke="rgba(154,0,7,0.4)" stroke-width="2" stroke-linecap="round"/>
+  <path d="M270 110 Q295 102 325 105" fill="none" stroke="rgba(255,160,160,0.35)" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Orificio nasal perforado distintivo (narinas desprovistas de tabique óseo medial) -->
+  <ellipse cx="370" cy="138" rx="8" ry="4" fill="#2A1012" transform="rotate(-8, 370, 138)"/>
+  <ellipse cx="370" cy="138" rx="6" ry="2.5" fill="#0C0405" transform="rotate(-8, 370, 138)"/>
+
+  <!-- Pico ganchudo fuerte de color marfil/hueso -->
+  <path d="M360 128 L430 142 Q450 152 445 168 Q430 162 410 156 L355 154 Z" fill="url(#beakGrad)" stroke="#808078" stroke-width="1"/>
+  <!-- Punta ganchuda y línea del pico -->
+  <path d="M358 145 L435 155 Q448 162 444 168" fill="none" stroke="#55554E" stroke-width="1.5"/>
+
+  <!-- Ojo avizor con iris pardo/rojizo -->
+  <circle cx="310" cy="130" r="10" fill="#2E1114" stroke="#8A1820" stroke-width="2"/>
+  <circle cx="310" cy="130" r="7" fill="#782329"/>
+  <circle cx="310" cy="130" r="4.5" fill="#0F0607"/>
+  <!-- Brillo de vida en el ojo -->
+  <circle cx="308" cy="128" r="1.8" fill="#FFFFFF"/>
+</svg>

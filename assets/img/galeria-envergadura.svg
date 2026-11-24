@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="warmSunrise" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E1618"/>
+      <stop offset="50%" stop-color="#22191D"/>
+      <stop offset="100%" stop-color="#141418"/>
+    </linearGradient>
+    <radialGradient id="solarDisc" cx="50%" cy="30%" r="50%">
+      <stop offset="0%" stop-color="#FFF3E0" stop-opacity="0.9"/>
+      <stop offset="25%" stop-color="#FFB74D" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#D32F2F" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#141418" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="primaryFeathers" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181E"/>
+      <stop offset="50%" stop-color="#282834"/>
+      <stop offset="100%" stop-color="#101014"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo cálido de amanecer/termorregulación -->
+  <rect width="600" height="400" fill="url(#warmSunrise)"/>
+
+  <!-- Sol radiante matutino detrás del ave -->
+  <circle cx="300" cy="150" r="160" fill="url(#solarDisc)"/>
+
+  <!-- Percha / Tronco seco sobre el que se posa -->
+  <path d="M260 400 L285 300 Q290 280 300 270 L315 300 L340 400 Z" fill="#18181E" stroke="#2A2A32" stroke-width="2"/>
+  <path d="M230 310 Q280 275 370 290" fill="none" stroke="#2A2A32" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Aura Tiñosa en postura de horquilla abierta al sol (secado y absorción de calor) -->
+  <g transform="translate(300, 260)">
+    <!-- Patas claras (blanquecinas por urohidrosis) -->
+    <rect x="-14" y="0" width="6" height="18" rx="2" fill="#D6D6D0"/>
+    <rect x="8" y="0" width="6" height="18" rx="2" fill="#D6D6D0"/>
+    <path d="M-18 18 L-8 18" stroke="#D6D6D0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M4 18 L14 18" stroke="#D6D6D0" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Cola negra cerrada orientada hacia abajo -->
+    <polygon points="-12,-20 12,-20 16,36 -16,36" fill="#0E0E12" stroke="#1E1E24" stroke-width="1"/>
+
+    <!-- Cuerpo dorsal erguido -->
+    <ellipse cx="0" cy="-35" rx="22" ry="38" fill="#141418" stroke="#25252F" stroke-width="1"/>
+
+    <!-- Ala Izquierda Totalmente Extendida al Sol (180 cm escala) -->
+    <path d="M-18,-45 Q-110,-100 -210,-95 Q-255,-80 -270,-60 Q-240,-10 -150,-15 Q-70,-20 -18,-28 Z" fill="url(#primaryFeathers)" stroke="#2A2A32" stroke-width="1.5"/>
+    <!-- Plumas remeras primarias abiertas a contraluz (efecto bicolor plateado) -->
+    <path d="M-130,-50 Q-210,-75 -260,-55 Q-230,-12 -140,-18 Z" fill="rgba(244,244,242,0.15)"/>
+    <!-- Bordes dentados de plumas individuales -->
+    <path d="M-270,-60 L-265,-40 L-250,-25 L-225,-12" stroke="rgba(211,47,47,0.4)" stroke-width="1.5" fill="none"/>
+
+    <!-- Ala Derecha Totalmente Extendida al Sol -->
+    <path d="M18,-45 Q110,-100 210,-95 Q255,-80 270,-60 Q240,-10 150,-15 Q70,-20 18,-28 Z" fill="url(#primaryFeathers)" stroke="#2A2A32" stroke-width="1.5"/>
+    <!-- Plumas remeras derechas a contraluz -->
+    <path d="M130,-50 Q210,-75 260,-55 Q230,-12 140,-18 Z" fill="rgba(244,244,242,0.15)"/>
+    <path d="M270,-60 L265,-40 L250,-25 L225,-12" stroke="rgba(211,47,47,0.4)" stroke-width="1.5" fill="none"/>
+
+    <!-- Cuello y cabeza roja de perfil al sol -->
+    <ellipse cx="0" cy="-78" rx="8" ry="12" fill="#D32F2F"/>
+    <circle cx="2" cy="-84" r="8" fill="#EF5350"/>
+    <polygon points="6,-86 16,-83 7,-81" fill="#F4F4F2"/>
+    <circle cx="2" cy="-85" r="1.5" fill="#121214"/>
+  </g>
+
+  <!-- Efecto de calor ascendente -->
+  <path d="M100 370 Q110 320 100 280" fill="none" stroke="rgba(255,183,77,0.15)" stroke-width="2"/>
+  <path d="M500 370 Q510 320 500 280" fill="none" stroke="rgba(255,183,77,0.15)" stroke-width="2"/>
+</svg>

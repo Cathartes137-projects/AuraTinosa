@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141418"/>
+      <stop offset="60%" stop-color="#1D1D24"/>
+      <stop offset="100%" stop-color="#2D1B22"/>
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D32F2F" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#D32F2F" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#121214"/>
+      <stop offset="50%" stop-color="#25252D"/>
+      <stop offset="100%" stop-color="#121214"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cielo oscuro y horizonte -->
+  <rect width="600" height="400" fill="url(#skyGrad)"/>
+  
+  <!-- Resplandor solar suave -->
+  <circle cx="300" cy="220" r="180" fill="url(#sunGlow)"/>
+
+  <!-- Líneas térmicas de viento ascendente -->
+  <path d="M50 350 Q150 280 250 310 T450 290 T580 320" fill="none" stroke="rgba(211,47,47,0.15)" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <path d="M20 280 Q180 200 320 240 T560 210" fill="none" stroke="rgba(244,244,242,0.08)" stroke-width="1.5"/>
+
+  <!-- Silueta del Aura Tiñosa en planeo majestuoso con diedro positivo en V -->
+  <g transform="translate(300, 190) scale(1.15)">
+    <!-- Cuerpo y cola -->
+    <ellipse cx="0" cy="10" rx="9" ry="24" fill="#0C0C0E"/>
+    <!-- Cola en cuña -->
+    <polygon points="-6,24 6,24 8,58 -8,58" fill="#121214"/>
+
+    <!-- Ala Izquierda en diedro (elevada hacia arriba) -->
+    <path d="M-6,2 Q-65,-30 -140,-58 Q-165,-64 -190,-60 Q-150,-10 -90,4 Q-45,12 -6,14 Z" fill="url(#wingGrad)" stroke="#2A2A32" stroke-width="1"/>
+    <!-- Plumas de vuelo plateadas/bicolor borde inferior ala izq -->
+    <path d="M-60,4 Q-120,-15 -185,-56 Q-145,-12 -80,10 Z" fill="rgba(244,244,242,0.18)"/>
+
+    <!-- Ala Derecha en diedro -->
+    <path d="M6,2 Q65,-30 140,-58 Q165,-64 190,-60 Q150,-10 90,4 Q45,12 6,14 Z" fill="url(#wingGrad)" stroke="#2A2A32" stroke-width="1"/>
+    <!-- Plumas de vuelo plateadas borde inferior ala der -->
+    <path d="M60,4 Q120,-15 185,-56 Q145,-12 80,10 Z" fill="rgba(244,244,242,0.18)"/>
+
+    <!-- Cabeza roja desnuda característica -->
+    <ellipse cx="0" cy="-14" rx="5" ry="7" fill="#D32F2F"/>
+    <!-- Pico pálido -->
+    <polygon points="-2,-18 2,-18 0,-26" fill="#F4F4F2"/>
+  </g>
+
+  <!-- Bandada lejana en silueta -->
+  <g opacity="0.35" transform="translate(140, 90) scale(0.35)">
+    <path d="M-40,-20 Q-15,-5 0,0 Q15,-5 40,-20 Q20,5 0,10 Q-20,5 -40,-20 Z" fill="#D32F2F"/>
+  </g>
+  <g opacity="0.25" transform="translate(460, 110) scale(0.28)">
+    <path d="M-40,-20 Q-15,-5 0,0 Q15,-5 40,-20 Q20,5 0,10 Q-20,5 -40,-20 Z" fill="#F4F4F2"/>
+  </g>
+</svg>
